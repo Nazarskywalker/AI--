@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #0f1923;
+  --foreground: #e8e6e3;
+  --card: #1a2735;
+  --card-foreground: #e8e6e3;
+  --popover: #1a2735;
+  --popover-foreground: #e8e6e3;
+  --primary: #c8734a;
+  --primary-foreground: #ffffff;
+  --secondary: #1e3045;
+  --secondary-foreground: #e8e6e3;
+  --muted: #1a2735;
+  --muted-foreground: #8b9cb3;
+  --accent: #c8734a;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #2a3f55;
+  --input: #1e3045;
+  --ring: #c8734a;
+  --chart-1: #c8734a;
+  --chart-2: #3b82f6;
+  --chart-3: #22c55e;
+  --chart-4: #eab308;
+  --chart-5: #ef4444;
+  --radius: 0.5rem;
+  --glow-orange: #c8734a;
+  --glow-cyan: #38bdf8;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-glow-orange: var(--glow-orange);
+  --color-glow-cyan: var(--glow-cyan);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.card-glow {
+  border: 1px solid rgba(200, 115, 74, 0.3);
+  box-shadow: 0 0 8px rgba(200, 115, 74, 0.15), inset 0 0 8px rgba(200, 115, 74, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-glow:hover {
+  border-color: rgba(200, 115, 74, 0.6);
+  box-shadow: 0 0 16px rgba(200, 115, 74, 0.3), inset 0 0 12px rgba(200, 115, 74, 0.1);
+}
+
+.card-glow-cyan {
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.15), inset 0 0 8px rgba(56, 189, 248, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-glow-cyan:hover {
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.3), inset 0 0 12px rgba(56, 189, 248, 0.1);
+}
+
+.nav-glow {
+  border-bottom: 1px solid rgba(200, 115, 74, 0.2);
+}
